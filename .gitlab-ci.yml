@@ -52,4 +52,5 @@ container_scanning:
   artifacts:
     paths: [gl-container-scanning-report.json]
   only:
-    - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /^test+/
